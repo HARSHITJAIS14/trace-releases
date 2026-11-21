@@ -1,10 +1,12 @@
 # Trace for Mac
 
-Official downloads of Trace by MindTrace for Apple silicon Macs.
+Trace by MindTrace for Apple silicon Macs.
 
-[View available releases](https://github.com/HARSHITJAIS14/trace-releases/releases)
+[Download Trace for Mac](https://github.com/HARSHITJAIS14/trace-releases/releases/latest/download/Trace-arm64.dmg) · [Latest release notes](https://github.com/HARSHITJAIS14/trace-releases/releases/latest) · [SHA-256 checksum](https://github.com/HARSHITJAIS14/trace-releases/releases/latest/download/Trace-arm64.dmg.sha256)
 
-If the releases page is empty, the first public build is still in preparation. When a release is available, download `Trace-arm64.dmg`, open it, drag Trace to Applications, eject the disk image and open Trace from Applications.
+**Build 73 launch notice.** This is a development-signed, unnotarized test build. macOS Gatekeeper rejected the copied app in testing. A Mac using default security settings may block the first launch. A fresh-Mac install and upgrade are still unverified for this version. [Build 73 test release notes](https://github.com/HARSHITJAIS14/trace-releases/releases/tag/v0.1.0-build73)
+
+Open the disk image, drag Trace to Applications, eject the image and open Trace from Applications. When both local models are missing, first-run setup downloads about 1.20 GB.
 
 ## Website download button
 
@@ -14,11 +16,9 @@ Use the same address for every public version.
 https://github.com/HARSHITJAIS14/trace-releases/releases/latest/download/Trace-arm64.dmg
 ```
 
-The matching SHA-256 checksum is available at the same address with `.sha256` added to the filename. These direct links become active with the first public release.
-
 ## Publishing an update
 
-1. Prepare a versioned draft release and record the version and build number in its title or notes. Use a Developer ID signed, notarized disk image that has passed a clean-Mac install and launch test.
-2. Name a copy of that final image `Trace-arm64.dmg`. In the same directory, run `shasum -a 256 Trace-arm64.dmg > Trace-arm64.dmg.sha256`. Attach both files to the draft.
-3. Publish the stable release and mark it as **Latest**. Earlier versions remain available under their own tags.
-4. Download both files using the permanent addresses as a signed-out visitor. In the download directory, run `shasum -a 256 -c Trace-arm64.dmg.sha256` and confirm it reports `OK`.
+1. Prepare a versioned draft release. Record the version, build number, signing status and clean-Mac test result. For a normal public release, use a Developer ID signed, notarized disk image that has passed the clean-Mac install and launch test.
+2. Name a copy of the final image `Trace-arm64.dmg`. Run `shasum -a 256 Trace-arm64.dmg > Trace-arm64.dmg.sha256` and attach both files to the draft.
+3. Publish and mark the intended release as **Latest**. Earlier builds remain available under their own tags.
+4. Download both files through the permanent links as a signed-out visitor. In the download directory, run `shasum -a 256 -c Trace-arm64.dmg.sha256` and confirm it reports `OK`.
